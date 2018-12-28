@@ -1,0 +1,15 @@
+go:
+  - "1.9"
+  - "1.10"
+  - "1.11"
+  - tip
+
+language: go
+
+matrix:
+  allow_failures:
+    - go: tip
+  fast_finish: true
+
+script:
+  - make
