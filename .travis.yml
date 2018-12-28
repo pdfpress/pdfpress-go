@@ -4,12 +4,16 @@ go:
   - "1.11"
   - tip
 
+sudo: false
 language: go
 
 matrix:
   allow_failures:
     - go: tip
   fast_finish: true
+
+install:
+  - gometalinter --install
 
 script:
   - make
